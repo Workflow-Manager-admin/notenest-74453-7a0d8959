@@ -28,8 +28,20 @@
 .App.notes-app-root {
   font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
   min-height: 100vh;
-  /* Modern main gradient background, minimal overlay pattern */
-  background: linear-gradient(135deg, #e3f0ff 0%, #f1f8ff 100%);
+  /*
+    Enhanced multi-stop main gradient for strong visual appeal:
+    - Vibrant blue to accent gold to deep indigo for boldness.
+    - Steeper angle, more color separation, visible on all displays.
+    - Modern minimal: Clean, unobtrusive
+  */
+  background: linear-gradient(
+    112deg,
+    #1976d2 0%,
+    #33cafc 35%,
+    #ffc107 67%,
+    #915bf5 88%,
+    #2f2c4f 100%
+  );
   color: var(--text-primary);
   display: flex;
   flex-direction: column;
@@ -38,8 +50,19 @@
 
 /* Gradient override for dark theme */
 [data-theme="dark"] .App.notes-app-root {
-  /* Softer blue-violet to muted navy, with subtle darkness */
-  background: linear-gradient(135deg, #222940 0%, #293354 75%, #181A20 100%);
+  /*
+    Much bolder, high-contrast dark gradient:
+    - Deep violet, intense accent gold, indigo, and black-bluish navy.
+    - Keeps modern minimal feel but is distinctly bold and visually present.
+  */
+  background: linear-gradient(
+    114deg,
+    #181A20 0%,
+    #3944ab 17%,
+    #d5a103 53%,
+    #7d21da 76%,
+    #13162a 100%
+  );
 }
 
 /* Navbar */
