@@ -28,11 +28,18 @@
 .App.notes-app-root {
   font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
   min-height: 100vh;
-  background: var(--bg-primary);
+  /* Modern main gradient background, minimal overlay pattern */
+  background: linear-gradient(135deg, #e3f0ff 0%, #f1f8ff 100%);
   color: var(--text-primary);
   display: flex;
   flex-direction: column;
   transition: background 0.25s, color 0.25s;
+}
+
+/* Gradient override for dark theme */
+[data-theme="dark"] .App.notes-app-root {
+  /* Softer blue-violet to muted navy, with subtle darkness */
+  background: linear-gradient(135deg, #222940 0%, #293354 75%, #181A20 100%);
 }
 
 /* Navbar */
@@ -228,7 +235,7 @@
 }
 
 .notes-list-empty {
-  color: var(--text-secondary);
+  color: #940505;
   padding: 1.9rem 0;
   text-align: center;
   font-size: 98%;
