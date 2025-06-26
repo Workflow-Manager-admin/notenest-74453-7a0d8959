@@ -29,18 +29,17 @@
   font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
   min-height: 100vh;
   /*
-    Enhanced multi-stop main gradient for strong visual appeal:
-    - Vibrant blue to accent gold to deep indigo for boldness.
-    - Steeper angle, more color separation, visible on all displays.
-    - Modern minimal: Clean, unobtrusive
+    Enhanced multi-stop pink gradient background for strong visual appeal:
+    - Pink hues: From light pink to vibrant fuchsia and soft blush for fresh, modern vibe.
+    - Maintains clean, minimal appearance.
+    - High readability for all main content.
   */
   background: linear-gradient(
     112deg,
-    #1976d2 0%,
-    #33cafc 35%,
-    #ffc107 67%,
-    #915bf5 88%,
-    #2f2c4f 100%
+    #ffbedd 0%,
+    #ff8abb 35%,
+    #ff4893 65%,
+    #d42e74 100%
   );
   color: var(--text-primary);
   display: flex;
@@ -51,17 +50,17 @@
 /* Gradient override for dark theme */
 [data-theme="dark"] .App.notes-app-root {
   /*
-    Much bolder, high-contrast dark gradient:
-    - Deep violet, intense accent gold, indigo, and black-bluish navy.
-    - Keeps modern minimal feel but is distinctly bold and visually present.
+    Modern pink-heavy dark gradient:
+    - Deep magenta and fuchsia for energetic, chic feeling.
+    - Preserves crisp UI, high contrast, and minimalism for night mode.
   */
   background: linear-gradient(
     114deg,
-    #181A20 0%,
-    #3944ab 17%,
-    #d5a103 53%,
-    #7d21da 76%,
-    #13162a 100%
+    #2a0731 0%,
+    #6f1348 22%,
+    #d42e74 49%,
+    #ff4893 74%,
+    #3b203a 100%
   );
 }
 
