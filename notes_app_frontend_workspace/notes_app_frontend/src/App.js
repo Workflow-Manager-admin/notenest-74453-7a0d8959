@@ -4,7 +4,19 @@ import './App.css';
 // PUBLIC_INTERFACE
 function App() {
   // State management
-  const [theme, setTheme] = useState('light');
+
+  // Try to read user theme from localStorage and system preference
+  const getInitialTheme = () => {
+    try {
+      const persisted = localStorage.getItem('theme');
+      if (persisted) return persisted;
+      // Fallback to prefers-color-scheme
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+    } catch {}
+    return 'light';
+  };
+
+  const [theme, setTheme] = useState(getInitialTheme());
   const [notes, setNotes] = useState(() => {
     // Try to load from localStorage for offline persistence
     try {
@@ -21,6 +33,9 @@ function App() {
   // Effect to apply theme to document element
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {}
   }, [theme]);
 
   // Persist notes to localStorage
